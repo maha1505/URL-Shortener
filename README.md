@@ -24,10 +24,7 @@ A simple URL shortener application built with React (frontend), Node.js + Expres
 
 ## Demo Video
 
-Watch the demo of this project here:  
-[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
-
-*(Click the image to watch the demo)*
+Watch the demo here: [Demo Video](https://drive.google.com/file/d/1kmHvtNUibMHw5VOQroGcyLC-NX02kMFz/view?usp=sharing)
 
 ---
 
@@ -71,6 +68,4 @@ Update your MySQL credentials in server/server.js.
 -View your shortened URL and all previously shortened URLs.
 -Click on a short link to be redirected to the original URL.
 
-## Demo Video
 
-Watch the demo here: [Demo Video](https://drive.google.com/file/d/1kmHvtNUibMHw5VOQroGcyLC-NX02kMFz/view?usp=sharing)
