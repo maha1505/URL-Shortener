@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff;            /* White text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    text-align: center;
+}
+
+.title {
+    color: #00aaff; /* Blue title */
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-field {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.shorten-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.shorten-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.short-link {
+    color: #00aaff; /* Blue link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.short-link:hover {
+    color: #66d9ff; /* Lighter blue on hover */
+}
+
+.url-list {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.url-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.url-list th, .url-list td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+.url-list th {
+    background-color: #222;
+    color: #00aaff;
+}
+
+.url-list td {
+    background-color: #111;
+    color: #fff;
+}
+
+.url-list a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.url-list a:hover {
+    color: #66d9ff;
+}
