@@ -13,8 +13,19 @@ app.use(cors());
 // Parse JSON body
 app.use(express.json());
 
-// MySQL connection setup - replace with your actual credentials
-const db = mysql.createConnection(process.env.DATABASE_URL);
+const url = require('url');
+
+// Parse the Railway DATABASE_URL
+const dbUrl = url.parse(process.env.DATABASE_URL);
+const [user, password] = dbUrl.auth.split(':');
+
+const db = mysql.createConnection({
+  host: dbUrl.hostname,
+  port: dbUrl.port,
+  user: user,
+  password: password,
+  database: dbUrl.pathname.replace('/', ''),
+});
 
 db.connect((err) => {
   if (err) {
@@ -24,6 +35,7 @@ db.connect((err) => {
     console.log('Connected to MySQL database');
   }
 });
+
 
 // Helper function to generate short IDs (6 chars alphanumeric)
 function generateShortId() {
