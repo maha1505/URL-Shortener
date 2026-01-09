@@ -1,104 +1,127 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Black background */
-    color: #fff;            /* White text */
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  margin: 0;
+  background: #f4f6fb;
+  color: #333;
 }
 
-.app-container {
-    text-align: center;
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.title {
-    color: #00aaff; /* Blue title */
-    margin-bottom: 20px;
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.app-title {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.input-field {
-    padding: 10px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+.form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
 }
 
-.shorten-button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Blue button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+.form button {
+  padding: 12px 20px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.shorten-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+.form button:disabled {
+  background: #9aa0ff;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 15px;
+  color: #dc2626;
 }
 
 .result {
-    margin-top: 20px;
+  margin-top: 25px;
+  background: #eef2ff;
+  padding: 15px;
+  border-radius: 8px;
 }
 
-.short-link {
-    color: #00aaff; /* Blue link */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.result span {
+  display: block;
+  font-size: 14px;
+  color: #555;
 }
 
-.short-link:hover {
-    color: #66d9ff; /* Lighter blue on hover */
+.result a {
+  font-size: 18px;
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.url-list {
-    margin-top: 40px;
-    text-align: left;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.table-card {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.url-list table {
-    width: 100%;
-    border-collapse: collapse;
+.table-card h2 {
+  margin-bottom: 20px;
 }
 
-.url-list th, .url-list td {
-    border: 1px solid #444;
-    padding: 10px;
-    text-align: left;
+.empty {
+  color: #777;
 }
 
-.url-list th {
-    background-color: #222;
-    color: #00aaff;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.url-list td {
-    background-color: #111;
-    color: #fff;
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
 }
 
-.url-list a {
-    color: #00aaff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+th {
+  background: #f8fafc;
 }
 
-.url-list a:hover {
-    color: #66d9ff;
+td a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.break {
+  word-break: break-all;
 }

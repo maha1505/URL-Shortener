@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Enable CORS so React frontend (localhost:3000) can talk to backend (localhost:5000)
 app.use(cors());
@@ -13,16 +15,15 @@ app.use(express.json());
 
 // MySQL connection setup - replace with your actual credentials
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'MAHAKAN',
-  database: 'url_shortener'  // your DB name
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 db.connect((err) => {
   if (err) {
     console.error('MySQL connection error:', err);
-    process.exit(1);
   } else {
     console.log('Connected to MySQL database');
   }
