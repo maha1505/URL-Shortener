@@ -20,12 +20,13 @@ const dbUrl = url.parse(process.env.DATABASE_URL);
 const [user, password] = dbUrl.auth.split(':');
 
 const db = mysql.createConnection({
-  host: dbUrl.hostname,
-  port: dbUrl.port,
-  user: user,
-  password: password,
-  database: dbUrl.pathname.replace('/', ''),
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT),
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
+
 
 db.connect((err) => {
   if (err) {
